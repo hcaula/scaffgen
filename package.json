@@ -1,0 +1,27 @@
+{
+  "name": "scaffgen",
+  "version": "1.0.0",
+  "description": "A rails-like scaffold generate for Node.js based on Mongoose models and Express controllers and routes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scaffold",
+    "generate",
+    "rails",
+    "express",
+    "mongoose",
+    "mongo"
+  ],
+  "bin": {
+    "scaffold": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hcaula/scaffgen"
+  },
+  "preferGlobal": true,
+  "author": "Henrique Caúla",
+  "license": "ISC"
+}
