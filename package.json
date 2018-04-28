@@ -15,7 +15,7 @@
     "mongo"
   ],
   "bin": {
-    "scaffold": "./bin/index.js"
+    "scaffgen": "./bin/index.js"
   },
   "repository": {
     "type": "git",

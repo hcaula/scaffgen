@@ -1,3 +1,2 @@
 #!/usr/bin/env node
-
-console.log("Hello!");
+const app_dir = process.cwd();
