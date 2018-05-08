@@ -16,13 +16,17 @@ const path = require('path');
 const fs = require('fs');
 
 /*
- * Main
+ * Constants
 */
 const main_dir = process.cwd();
 const app_dir = path.join(main_dir, app_dir_name);
 const controllers_dir = path.join(app_dir, controllers_dir_name);
 const models_dir = path.join(app_dir, models_dir_name);
 const routes_dir = path.join(app_dir, routes_dir_name);
+
+/*
+ * Main
+*/
 
 /* Creates directories if they don't exist */
 if (!fs.existsSync(app_dir)) fs.mkdirSync(app_dir);
