@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-require('./parse');
+const model = require('./parse');
 
 /*
  * Inputs

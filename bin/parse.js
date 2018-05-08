@@ -1,11 +1,16 @@
+/*
+ * Dependencies
+*/
 const { ArgumentParser } = require('argparse');
 
+/* Declaring Argument Parser */
 const parser = new ArgumentParser({
     version: '0.0.1',
     addHelp: true,
-    description: 'Argparse example'
+    description: 'Scaffgen'
 });
 
+/* Declaring accepted arguments */
 const arguments = [
     {
         flags: [],
@@ -30,14 +35,15 @@ const arguments = [
     }
 ]
 
+/* Add arguments to parser */
 arguments.forEach(arg => parser.addArgument(arg.flags, arg.options));
 
-const terminalArgs = parser.parseArgs();
-
-let model = { name: terminalArgs.name };
-
+/* Custom parsing of attributes */
 const parseAttributes = function () {
-    let attributes = [];
+    const terminalArgs = parser.parseArgs();
+
+    let model = { name: terminalArgs.name, attributes: [] };
+
     terminalArgs.model.forEach(attr => {
         let attribute = {};
 
@@ -54,15 +60,11 @@ const parseAttributes = function () {
             if (hasMax) attribute.max = hasMax[0].match(/\d+/)[0];
         }
 
-        attributes.push(attribute);
+        model.attributes.push(attribute);
     });
 
-    model.attributes = attributes;
+    return model;
 }
 
+module.exports = parseAttributes();
 
-parseAttributes();
-
-console.log(model);
-
-// console.log(args);
