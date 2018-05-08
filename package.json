@@ -23,5 +23,8 @@
   },
   "preferGlobal": true,
   "author": "Henrique Caúla",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "argparse": "^1.0.10"
+  }
 }
